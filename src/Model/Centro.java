@@ -4,6 +4,7 @@ package Model;
 import java.util.ArrayList;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -13,6 +14,7 @@ import javax.persistence.Id;
 @Entity
 public class Centro {
     @Id
+    @GeneratedValue
     @Column
     private String id;
     @Column 
@@ -23,23 +25,22 @@ public class Centro {
     private boolean lotado;
     @Column
     private int lotacao;
-    @Column
+    
     private ArrayList<Operador> operadores;
-    @Column
+   
     private ArrayList<Gestor> gestores;
-    @Column
+    
     private ArrayList<Alojado> alojados;
 
-    public Centro(String nome, String id, String localizacao, int lotacao, ArrayList<Operador> operadores, ArrayList<Gestor> gestores, ArrayList<Alojado> alojados) {
-        this.nome = nome;
+    public Centro(String id, String nome, String localizacao, boolean lotado, int lotacao) {
         this.id = id;
+        this.nome = nome;
         this.localizacao = localizacao;
+        this.lotado = lotado;
         this.lotacao = lotacao;
-        this.operadores = operadores;
-        this.gestores = gestores;
-        this.alojados = alojados;
-        this.lotado = false;
     }
+
+    
 
     public Centro() {
     }

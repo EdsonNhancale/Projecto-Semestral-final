@@ -47,17 +47,17 @@ public class Todos {
 //            System.out.println("Nome: "+centros.getNome());
 //        }
 
- TodosDao<Alojado> crud = new TodosDao<Alojado>();
-        Alojado teste = new Alojado();
-        teste.setDoenca("Malaaria");
-        crud.salvar(teste);
+// TodosDao<Centro> crud = new TodosDao<Centro>();
+//        Centro teste = new Centro();
+//        teste.setNome("Matola");
+//        crud.salvar(teste);
 
    
         
-//        for (Centro centros: centro) {
-//            JOptionPane.showMessageDialog(null, centros.getNome());
-//            System.out.println("Nome: "+centros.getNome());
-//        }
+        for (Centro centros: centro) {
+            JOptionPane.showMessageDialog(null, centros.getNome());
+            System.out.println("Nome: "+centros.getNome());
+        }
 
     }
     
